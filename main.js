@@ -6,12 +6,13 @@ import './style.css'
  * 2C = Two of Clubs
  * 2D = Two of Diamonds
  * 2H = Two of Hearts
- * 2S = Two of Spades
+ * 2S = Two of Spades.
  */
 
 let deck         = [];
 const tipos      = ['C','D','H','S'];
-const especiales = ['A','J','Q','K'];
+const es""peciales = ['A','J','Q','K'];
+const x=""
 
 let puntosJugador = 0,
     puntosComputadora = 0;
