@@ -4,6 +4,7 @@ import _ from 'underscore'
 // import cualquierNombreParaCrearDeck, {miNombre} from './usecases/crear-deck'   esto sirve si exporto por default, el nombre se lo asignamos
 
 import { crearDeck } from "./usecases/crear-deck";
+import { pedirCarta } from './usecases/pedir-carta';
 
 /**
  * 2C = Two of Clubs
@@ -32,15 +33,7 @@ const puntosHTML = document.querySelectorAll('small');
 deck = crearDeck(tipos, especiales);
 
 
-// Esta función me permite tomar una carta
-const pedirCarta = () => {
 
-    if ( deck.length === 0 ) {
-        throw 'No hay cartas en el deck';
-    }
-    const carta = deck.pop();
-    return carta;
-}
 
 // pedirCarta();
 const valorCarta = ( carta ) => {
@@ -55,7 +48,7 @@ const valorCarta = ( carta ) => {
 const turnoComputadora = ( puntosMinimos ) => {
 
     do {
-        const carta = pedirCarta();
+        const carta = pedirCarta(deck);
 
         puntosComputadora = puntosComputadora + valorCarta( carta );
         puntosHTML[1].innerText = puntosComputadora;
@@ -90,7 +83,7 @@ const turnoComputadora = ( puntosMinimos ) => {
 // Eventos
 btnPedir.addEventListener('click', () => {
 
-    const carta = pedirCarta();
+    const carta = pedirCarta(deck);
     
     puntosJugador = puntosJugador + valorCarta( carta );
     puntosHTML[0].innerText = puntosJugador;
