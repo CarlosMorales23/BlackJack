@@ -1,4 +1,8 @@
 import _ from 'underscore'
+// import { crearDeck as crearNuevoDeck} from "./usecases/crear-deck";
+// import cualquierNombreParaCrearDeck from './usecases/crear-deck'   esto sirve si exporto por default, el nombre se lo asignamos
+// import cualquierNombreParaCrearDeck, {miNombre} from './usecases/crear-deck'   esto sirve si exporto por default, el nombre se lo asignamos
+
 import { crearDeck } from "./usecases/crear-deck";
 
 /**
@@ -25,7 +29,7 @@ const divCartasComputadora = document.querySelector('#computadora-cartas');
 
 const puntosHTML = document.querySelectorAll('small');
 
-crearDeck(tipos, especiales);
+deck = crearDeck(tipos, especiales);
 
 
 // Esta función me permite tomar una carta
