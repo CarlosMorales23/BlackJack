@@ -11,8 +11,7 @@ import './style.css'
 
 let deck         = [];
 const tipos      = ['C','D','H','S'];
-const es""peciales = ['A','J','Q','K'];
-const x=""
+const especiales = ['A','J','Q','K'];
 
 let puntosJugador = 0,
     puntosComputadora = 0;
