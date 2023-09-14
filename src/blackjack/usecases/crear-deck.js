@@ -2,7 +2,18 @@ import _ from 'underscore'
 // import { shuffle } from 'underscore'
 
 
+/**
+ * Esta función crea un nuevo deck. 
+ * @param {Array<string>} tiposDeCarta Ejemplo ['C','D','H','S']
+ * @param {Array<string>} tiposEspeciales Ejemplo ['A','J','Q','K']
+ * @returns {Array<string>}  Regresa un nuevo deck. 
+ */
+
+
 export const crearDeck = (tiposDeCarta, tiposEspeciales) => {
+
+    if(!tiposDeCarta || !tiposEspeciales) throw new ('TiposDeCarta y Tipos Especiales son obligatorio')
+    if(tiposDeCarta === 0 || tiposEspeciales === 0) throw new ('TiposDeCarta y Tipos Especiales deben ser string')
 
     let deck = []
 
@@ -17,7 +28,6 @@ export const crearDeck = (tiposDeCarta, tiposEspeciales) => {
             deck.push( esp + tipo);
         }
     }
-    // console.log( deck );
     deck = _.shuffle( deck );
     console.log( deck );
     return deck;
