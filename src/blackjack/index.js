@@ -2,10 +2,8 @@ import _ from 'underscore'
 // import { crearDeck as crearNuevoDeck} from "./usecases/crear-deck";
 // import cualquierNombreParaCrearDeck from './usecases/crear-deck'   esto sirve si exporto por default, el nombre se lo asignamos
 // import cualquierNombreParaCrearDeck, {miNombre} from './usecases/crear-deck'   esto sirve si exporto por default, el nombre se lo asignamos
+import {crearDeck, pedirCarta, valorCarta} from './usecases'
 
-import { crearDeck } from "./usecases/crear-deck";
-import { pedirCarta } from './usecases/pedir-carta';
-import { valorCarta } from './usecases/valor-carta';
 /**
  * 2C = Two of Clubs
  * 2D = Two of Diamonds

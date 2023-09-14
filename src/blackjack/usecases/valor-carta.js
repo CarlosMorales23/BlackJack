@@ -1,9 +1,9 @@
 // pedirCarta();
 
 /**
- * 
+ * Obtener el valor de la carta
  * @param {String} carta 
- * @returns {Number}  Retorna el valor de la carta seleccionada
+ * @returns {Number}  Valor de la carta seleccionada
  */
 export const valorCarta = ( carta ) => {
 
