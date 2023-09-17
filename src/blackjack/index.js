@@ -32,7 +32,7 @@ deck = crearDeck(tipos, especiales);
 
 alert(`Intenta llegar a 21, puedes detenerte antes de 21, y probrar si la pc te gana o no.`)
 alert(`Gana quien haga 21 puntos o el que mas se acerque`)
-alert(`Las cartas con letras valen 10 puntos, Suerte`)
+alert(`Las cartas con letras valen 10 puntos, Suerte.`)
 
 // Eventos
 btnPedir.addEventListener('click', () => {
