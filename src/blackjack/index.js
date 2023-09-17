@@ -2,7 +2,7 @@ import _ from 'underscore'
 // import { crearDeck as crearNuevoDeck} from "./usecases/crear-deck";
 // import cualquierNombreParaCrearDeck from './usecases/crear-deck'   esto sirve si exporto por default, el nombre se lo asignamos
 // import cualquierNombreParaCrearDeck, {miNombre} from './usecases/crear-deck'   esto sirve si exporto por default, el nombre se lo asignamos
-import {crearDeck, pedirCarta, valorCarta, turnoComputadora} from './usecases'
+import {crearDeck, pedirCarta, valorCarta, turnoComputadora, crearCartaHTML} from './usecases'
 
 /**
  * 2C = Two of Clubs
@@ -38,10 +38,7 @@ btnPedir.addEventListener('click', () => {
     puntosJugador = puntosJugador + valorCarta( carta );
     puntosHTML[0].innerText = puntosJugador;
     
-    // <img class="carta" src="assets/cartas/2C.png">
-    const imgCarta = document.createElement('img');
-    imgCarta.src = `assets/cartas/${ carta }.png`; //3H, JD
-    imgCarta.classList.add('carta');
+    const imgCarta = crearCartaHTML (carta)
     divCartasJugador.append( imgCarta );
 
     if ( puntosJugador > 21 ) {
