@@ -10,4 +10,4 @@ Pasos para ejecutar proyecto:
 ## Producción
 
 1. Ejecutar ```npm run build```
-2. Tomar la carpeta ```dist``` y desplegar
+2. Tomar la carpeta ```dist``` y desplegar.
